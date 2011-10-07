@@ -124,6 +124,9 @@ class IBackendPlugin(IPlugin):
     name = None
     widget = None
     
+    def __init__(self):
+        IPlugin.__init__(self)
+    
     def get_name(self):
         return self.name
     
@@ -158,15 +161,24 @@ class IBackendPlugin(IPlugin):
 
 class IAudioInput(IBackendPlugin):
     
+    def __init__(self):
+        IBackendPlugin.__init__(self)
+    
     def get_audioinput_bin(self):
         pass
     
 class IAudioMixer(IBackendPlugin):
     
+    def __init__(self):
+        IBackendPlugin.__init__(self)
+    
     def get_audiomixer_bin(self):
         pass
     
 class IVideoInput(IBackendPlugin):
+    
+    def __init__(self):
+        IBackendPlugin.__init__(self)
     
     def get_videoinput_bin(self):
         """
@@ -176,6 +188,9 @@ class IVideoInput(IBackendPlugin):
         pass
     
 class IVideoMixer(IBackendPlugin):
+    
+    def __init__(self):
+        IBackendPlugin.__init__(self)
     
     def get_videomixer_bin(self):
         """
@@ -188,6 +203,9 @@ class IOutput(IBackendPlugin):
     type = None # Types: audio, video, both
     extension = None
     location = None
+    
+    def __init__(self):
+        IBackendPlugin.__init__(self)
     
     def get_type(self):
         return self.type
