@@ -337,6 +337,7 @@ class TalkEditorMainApp(QtGui.QMainWindow):
     
 
 if __name__ == "__main__":
+    import sys
     app = QtGui.QApplication(sys.argv)
     main = TalkEditorMainApp()
     main.show()
